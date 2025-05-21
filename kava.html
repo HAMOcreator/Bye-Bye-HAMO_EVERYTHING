@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <title>☕ Káva – 1 Kč</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #fefefe;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      color: #d35400;
+      margin-bottom: 10px;
+    }
+    input {
+      padding: 10px;
+      font-size: 1rem;
+      width: 250px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      margin-bottom: 15px;
+    }
+    button {
+      padding: 12px 24px;
+      font-size: 1rem;
+      background-color: #27ae60;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #219150;
+    }
+    a {
+      margin-top: 15px;
+      color: #2980b9;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+  <script>
+    function odeslatPlatbu() {
+      const prezdivka = document.getElementById("prezdivka").value.trim();
+      if (!prezdivka) {
+        alert("Zadej prosím svou přezdívku.");
+        return;
+      }
+      const baseUrl = "https://gopay.fake/payment?item=Káva&amount=1&note=";
+      const finalUrl = baseUrl + encodeURIComponent("Káva – přezdívka: " + prezdivka);
+      window.location.href = finalUrl;
+    }
+  </script>
+</head>
+<body>
+  <h1>☕ Káva – 1 Kč</h1>
+  <p>Zadej svou přezdívku:</p>
+  <input type="text" id="prezdivka" placeholder="Tvoje přezdívka">
+  <button onclick="odeslatPlatbu()">ZAPLATIT</button>
+  <a href="index.html">⬅️ Zpět na výběr</a>
+</body>
+</html>
