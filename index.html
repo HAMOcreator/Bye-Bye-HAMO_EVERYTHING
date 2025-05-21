@@ -2,55 +2,158 @@
 <html lang="cs">
 <head>
   <meta charset="UTF-8">
-  <title>Bye-Bye-HAMO-EVERYTHING – Menu</title>
+  <title>PO-JO PARTY MENU</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    body {{
+    body {
       font-family: 'Montserrat', sans-serif;
-      background-color: #fffaf3;
-      color: #333;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
       margin: 0;
+      background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+      color: white;
+    }
+    header {
+      text-align: center;
+      padding: 30px 20px 10px;
+      background-color: #111;
+    }
+    header img {
+      width: 150px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      color: #ffd700;
+    }
+    header p {
+      font-size: 1.1rem;
+      color: #ccc;
+    }
+    .section {
+      padding: 40px 20px;
+    }
+    .section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 30px;
+      color: #ffdd57;
+      text-align: center;
+    }
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .card {
+      background-color: rgba(255, 255, 255, 0.05);
+      border: 2px solid #ffd700;
+      border-radius: 16px;
+      width: 240px;
+      text-align: center;
       padding: 20px;
-    }}
-    h1 {{
-      color: #e67e22;
-    }}
-    ul {{
-      list-style: none;
-      padding: 0;
-    }}
-    li {{
-      margin: 10px 0;
-    }}
-    a {{
+      backdrop-filter: blur(8px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+    .card img {
+      width: 70px;
+      height: 70px;
+      margin-bottom: 10px;
+    }
+    .card h3 {
+      font-size: 1.3rem;
+      margin: 10px 0 5px;
+    }
+    .card p {
+      color: #ccc;
+      margin: 0 0 15px;
+    }
+    .card a {
       text-decoration: none;
-      font-size: 1.2rem;
-      color: #27ae60;
-    }}
-    a:hover {{
-      text-decoration: underline;
-      color: #219150;
-    }}
+      background-color: #ff4e50;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      display: inline-block;
+    }
+    .card a:hover {
+      background-color: #ff1e2d;
+    }
   </style>
 </head>
 <body>
-  <h1>Bye-Bye-HAMO-EVERYTHING</h1>
-  <p>Vyber si svou položku:</p>
-  <ul>
-    <li><a href="voda.html">💧 Neperlivá voda 0,5 PET – 1 Kč</a></li>
-    <li><a href="limonada.html">🍓 Červená limonáda – 1 Kč</a></li>
-    <li><a href="kava.html">☕ Káva – 1 Kč</a></li>
-    <li><a href="punch.html">🍹 Punch Bowl – 1 Kč</a></li>
-    <li><a href="gin.html">🍸 Gin Tonic – 1 Kč</a></li>
-    <li><a href="pinkgin.html">🌺🍸 Pink Gin Tonic – 1 Kč</a></li>
-    <li><a href="rumcola.html">🥃+🥤 Rum s Colou – 1 Kč</a></li>
-    <li><a href="aperol.html">🧡🍷 Aperol – 1 Kč</a></li>
-    <li><a href="hugo.html">🌿🥂 Hugo – 1 Kč</a></li>
-  </ul>
+
+<header>
+  <img src="logo.png" alt="PO-JO Logo">
+  <h1>PO-JO KOKTEJLY A SNY</h1>
+  <p>Festivalová party nabídka – každý drink za 50 Kč</p>
+</header>
+
+<div class="section">
+  <h2>🥤 Nápoje k výběru</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="https://img.icons8.com/color/96/cocktail.png" alt="Neperlivá voda 0,5 PET">
+      <h3>Neperlivá voda 0,5 PET</h3>
+      <p>50 Kč</p>
+      <a href="menu/neperlivávoda0,5pet.html">Objednat</a>
+    </div>
+    <div class="card">
+      <img src="https://img.icons8.com/color/96/cocktail.png" alt="Červená limonáda">
+      <h3>Červená limonáda</h3>
+      <p>50 Kč</p>
+      <a href="menu/cervenálimonáda.html">Objednat</a>
+    </div>
+    <div class="card">
+      <img src="https://img.icons8.com/color/96/cocktail.png" alt="Káva">
+      <h3>Káva</h3>
+      <p>50 Kč</p>
+      <a href="menu/káva.html">Objednat</a>
+    </div>
+    <div class="card">
+      <img src="https://img.icons8.com/color/96/cocktail.png" alt="Punch Bowl">
+      <h3>Punch Bowl</h3>
+      <p>50 Kč</p>
+      <a href="menu/punchbowl.html">Objednat</a>
+    </div>
+    <div class="card">
+      <img src="https://img.icons8.com/color/96/cocktail.png" alt="Gin Tonic">
+      <h3>Gin Tonic</h3>
+      <p>50 Kč</p>
+      <a href="menu/gintonic.html">Objednat</a>
+    </div>
+    <div class="card">
+      <img src="https://img.icons8.com/color/96/cocktail.png" alt="Pink Gin Tonic">
+      <h3>Pink Gin Tonic</h3>
+      <p>50 Kč</p>
+      <a href="menu/pinkgintonic.html">Objednat</a>
+    </div>
+    <div class="card">
+      <img src="https://img.icons8.com/color/96/cocktail.png" alt="Rum s Colou">
+      <h3>Rum s Colou</h3>
+      <p>50 Kč</p>
+      <a href="menu/rumscolou.html">Objednat</a>
+    </div>
+    <div class="card">
+      <img src="https://img.icons8.com/color/96/apero-spritz.png" alt="Aperol">
+      <h3>Aperol</h3>
+      <p>50 Kč</p>
+      <a href="menu/aperol.html">Objednat</a>
+    </div>
+    <div class="card">
+      <img src="https://img.icons8.com/color/96/champagne.png" alt="Hugo">
+      <h3>Hugo</h3>
+      <p>50 Kč</p>
+      <a href="menu/hugo.html">Objednat</a>
+    </div>
+
+  </div>
+</div>
+
 </body>
 </html>
